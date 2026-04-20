@@ -4,9 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>FAABOT | طلباتي - أسرع بوث للخدمات الرقمية</title>
-    <!-- Font Awesome 6 (مجاني للأيقونات) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <!-- Google Fonts: خط عربي حديث + خط أنيق -->
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         * {
@@ -27,7 +25,6 @@
             direction: rtl;
         }
 
-        /* خلفية ديناميكية بنقاط متحركة */
         body::before {
             content: "";
             position: fixed;
@@ -41,7 +38,6 @@
             z-index: 0;
         }
 
-        /* بطاقة رئيسية زجاجية (Glassmorphism) */
         .glass-card {
             background: rgba(255, 255, 255, 0.07);
             backdrop-filter: blur(12px);
@@ -62,7 +58,6 @@
             }
         }
 
-        /* تنسيق الصورة الأولى (البوت) */
         .hero-image {
             text-align: center;
             margin-bottom: 2rem;
@@ -84,7 +79,6 @@
             box-shadow: 0 25px 40px -12px black;
         }
 
-        /* عنوان تعريف البوت */
         .brand {
             text-align: center;
             margin-bottom: 1.8rem;
@@ -98,7 +92,6 @@
             -webkit-background-clip: text;
             color: transparent;
             letter-spacing: -0.5px;
-            text-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
 
         .brand p {
@@ -110,10 +103,8 @@
             display: inline-block;
             padding: 0.2rem 1rem;
             border-radius: 40px;
-            backdrop-filter: blur(4px);
         }
 
-        /* شبكة السوشيال ميديا */
         .social-grid {
             display: flex;
             flex-wrap: wrap;
@@ -149,10 +140,8 @@
             font-weight: 600;
             font-size: 0.9rem;
             color: #f1f5f9;
-            letter-spacing: 0.3px;
         }
 
-        /* ألوان أيقونات خاصة */
         .social-item.tiktok i { color: #00f2ea; text-shadow: 0 0 5px #ff0050; }
         .social-item.instagram i { color: #d62976; text-shadow: 0 0 4px #f56040; }
         .social-item.facebook i { color: #1877f2; text-shadow: 0 0 4px #8bb9fe; }
@@ -164,11 +153,6 @@
             box-shadow: 0 15px 25px -10px rgba(0,0,0,0.5);
         }
 
-        .social-item:hover i {
-            transform: scale(1.05);
-        }
-
-        /* قسم رابط التيليجرام الرئيسي */
         .telegram-section {
             background: linear-gradient(105deg, rgba(0, 100, 148, 0.4) 0%, rgba(0, 160, 209, 0.3) 100%);
             border-radius: 2rem;
@@ -191,8 +175,6 @@
             align-items: center;
             justify-content: center;
             margin-bottom: 0.8rem;
-            backdrop-filter: blur(4px);
-            border: 1px solid #ffffff50;
         }
 
         .telegram-section h3 {
@@ -216,7 +198,6 @@
             transition: 0.2s;
             border: 1px solid #3b82f6;
             color: white;
-            box-shadow: 0 5px 12px rgba(0,0,0,0.2);
         }
 
         .telegram-link i {
@@ -228,7 +209,6 @@
             background: #2d3a60;
             transform: scale(1.02);
             border-color: #60a5fa;
-            box-shadow: 0 12px 20px -8px rgba(0,0,0,0.4);
         }
 
         .copy-area {
@@ -249,8 +229,6 @@
             color: #bbf0ff;
             border: 1px solid #2c3e66;
             word-break: break-all;
-            text-align: center;
-            flex: 1;
         }
 
         .copy-btn {
@@ -271,10 +249,8 @@
         .copy-btn:hover {
             background: #1e3a5f;
             color: white;
-            transform: scale(0.97);
         }
 
-        /* زر بدء البوت المباشر */
         .start-bot-btn {
             display: block;
             background: linear-gradient(95deg, #f97316, #ef4444);
@@ -288,7 +264,6 @@
             text-decoration: none;
             transition: all 0.25s;
             box-shadow: 0 8px 20px rgba(249,115,22,0.3);
-            border: 1px solid #ffb347;
         }
 
         .start-bot-btn i {
@@ -298,10 +273,8 @@
         .start-bot-btn:hover {
             transform: translateY(-3px);
             background: linear-gradient(95deg, #ff8c42, #e63e3e);
-            box-shadow: 0 14px 28px rgba(249,115,22,0.5);
         }
 
-        /* تذييل */
         .footer-note {
             margin-top: 2rem;
             font-size: 0.7rem;
@@ -310,147 +283,72 @@
             border-top: 1px solid rgba(255,255,255,0.1);
             padding-top: 1.2rem;
         }
-
-        .footer-note a {
-            color: #c084fc;
-            text-decoration: none;
-        }
-
-        /* تأثير ظهور الصفحة */
-        .glass-card {
-            animation: fadeSlideUp 0.6s ease-out;
-        }
-
-        @keyframes fadeSlideUp {
-            from {
-                opacity: 0;
-                transform: translateY(35px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* تنسيق أيقونات إضافية */
-        .badge {
-            background: #00000055;
-            border-radius: 50px;
-            padding: 0.2rem 0.8rem;
-            font-size: 0.7rem;
-            color: #facc15;
-        }
     </style>
 </head>
 <body>
-
 <div class="glass-card">
-    <!-- الصورة الأولى (المقدمة من المستخدم: 5427.jpg) -->
+    <!-- الصورة الأولى (5427.jpg) -->
     <div class="hero-image">
-        <img src="5427.jpg" alt="طلباتي - بوث طلباتي الأسرع لإنجاز الخدمات الرقمية" onerror="this.onerror=null; this.src='https://placehold.co/800x400/1e293b/ffb347?text=FAABOT+%7C+%D8%B7%D9%84%D8%A8%D8%A7%D8%AA%D9%8A';">
+        <img src="5427.jpg" alt="طلباتي - بوث طلباتي الأسرع">
     </div>
 
-    <!-- اسم البوت والوصف -->
     <div class="brand">
         <h1>⚡ FAABOT ⚡</h1>
         <p>بوث طلباتي الأسرع | خدمات رقمية بلمسة احترافية</p>
     </div>
 
-    <!-- شبكة وسائل التواصل: تيك توك - انستجرام - فيسبوك -->
     <div class="social-grid">
-        <!-- TikTok -->
-        <a href="https://www.tiktok.com/@faabot" target="_blank" rel="noopener noreferrer" class="social-item tiktok">
+        <a href="https://www.tiktok.com/@faabot" target="_blank" class="social-item tiktok">
             <i class="fab fa-tiktok"></i>
             <span>TikTok</span>
-            <small class="badge">تابعنا</small>
         </a>
-        <!-- Instagram -->
-        <a href="https://www.instagram.com/faabot" target="_blank" rel="noopener noreferrer" class="social-item instagram">
+        <a href="https://www.instagram.com/faabot" target="_blank" class="social-item instagram">
             <i class="fab fa-instagram"></i>
             <span>Instagram</span>
-            <small class="badge">انستجرام</small>
         </a>
-        <!-- Facebook -->
-        <a href="https://www.facebook.com/faabot" target="_blank" rel="noopener noreferrer" class="social-item facebook">
+        <a href="https://www.facebook.com/faabot" target="_blank" class="social-item facebook">
             <i class="fab fa-facebook-f"></i>
             <span>Facebook</span>
-            <small class="badge">فيسبوك</small>
         </a>
     </div>
 
-    <!-- قسم التيليجرام الرئيسي مع الرابط المطلوب -->
     <div class="telegram-section">
-        <div class="telegram-icon">
-            <i class="fab fa-telegram-plane"></i>
-        </div>
+        <div class="telegram-icon"><i class="fab fa-telegram-plane"></i></div>
         <h3>🚀 انطلق مع FAABOT الآن</h3>
-        <p style="color:#cbd5e6; font-size:0.9rem; margin-bottom:0.8rem;">أسرع بوت تلجرام لإنجاز الخدمات الرقمية بضغطة زر</p>
-        
-        <!-- الرابط المباشر للدعوة عبر Telegram -->
-        <a href="https://t.me/FAABOT?start=8459753607" target="_blank" rel="noopener noreferrer" class="telegram-link">
+        <a href="https://t.me/FAABOT?start=8459753607" target="_blank" class="telegram-link">
             <i class="fab fa-telegram"></i> اضغط لبدء البوت مباشرة
         </a>
-        
-        <!-- عرض الرابط + زر نسخ -->
         <div class="copy-area">
             <div class="link-text" id="telegramLinkCopy">https://t.me/FAABOT?start=8459753607</div>
             <button class="copy-btn" id="copyLinkBtn"><i class="far fa-copy"></i> نسخ الرابط</button>
         </div>
-        <small style="display: block; margin-top: 8px; color:#9ca3af;">✨ الرابط يحتوي على كود الإحالة الخاص بك ✨</small>
+        <small style="color:#9ca3af;">✨ الرابط يحتوي على كود الإحالة الخاص بك ✨</small>
     </div>
 
-    <!-- زر إضافي جذاب -->
     <a href="https://t.me/FAABOT?start=8459753607" target="_blank" class="start-bot-btn">
         <i class="fab fa-telegram"></i> ابدأ الخدمات الرقمية الآن <i class="fas fa-arrow-left"></i>
     </a>
 
     <div class="footer-note">
-        <i class="fas fa-bolt"></i> طلباتي – البوت الأسرع لتلبية احتياجاتك الرقمية | تواصل معنا عبر القنوات الرسمية
-        <br>
-        <a href="#" style="cursor:default;">© 2025 FAABOT | جميع الحقوق محفوظة</a>
+        <i class="fas fa-bolt"></i> طلباتي – البوت الأسرع لتلبية احتياجاتك الرقمية
     </div>
 </div>
-
-<!-- سكربت صغير لنسخ الرابط وتأكيد تفاعلي -->
 <script>
-    (function() {
-        const copyBtn = document.getElementById('copyLinkBtn');
-        const linkTextElement = document.getElementById('telegramLinkCopy');
-        
-        if (copyBtn) {
-            copyBtn.addEventListener('click', async () => {
-                const linkToCopy = linkTextElement.innerText.trim();
-                try {
-                    await navigator.clipboard.writeText(linkToCopy);
-                    // تغيير مؤقت للنص
-                    const originalText = copyBtn.innerHTML;
-                    copyBtn.innerHTML = '<i class="fas fa-check-circle"></i> تم النسخ!';
-                    copyBtn.style.background = '#2b6e3c';
-                    copyBtn.style.color = 'white';
-                    setTimeout(() => {
-                        copyBtn.innerHTML = originalText;
-                        copyBtn.style.background = '#0f212e';
-                        copyBtn.style.color = '#90e0ff';
-                    }, 2000);
-                } catch (err) {
-                    console.error('فشل النسخ: ', err);
-                    copyBtn.innerHTML = '<i class="fas fa-exclamation-triangle"></i> خطأ';
-                    setTimeout(() => {
-                        copyBtn.innerHTML = '<i class="far fa-copy"></i> نسخ الرابط';
-                    }, 1500);
-                }
-            });
+    const copyBtn = document.getElementById('copyLinkBtn');
+    const linkText = document.getElementById('telegramLinkCopy');
+    copyBtn.addEventListener('click', async () => {
+        try {
+            await navigator.clipboard.writeText(linkText.innerText);
+            copyBtn.innerHTML = '<i class="fas fa-check-circle"></i> تم النسخ!';
+            copyBtn.style.background = '#2b6e3c';
+            setTimeout(() => {
+                copyBtn.innerHTML = '<i class="far fa-copy"></i> نسخ الرابط';
+                copyBtn.style.background = '#0f212e';
+            }, 2000);
+        } catch(e) {
+            copyBtn.innerHTML = '<i class="fas fa-exclamation-triangle"></i> خطأ';
         }
-
-        // إضافة تأثير hover على أيقونات وسائل التواصل بشكل إضافي (جمالي فقط)
-        const socialItems = document.querySelectorAll('.social-item');
-        socialItems.forEach(item => {
-            item.addEventListener('click', function(e) {
-                // لا نقوم بأي شيء إضافي سوى السماح بالتنقل العادي
-                // يمكن إضافة تتبع اختياري
-            });
-        });
-    })();
+    });
 </script>
 </body>
 </html>
