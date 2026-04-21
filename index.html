@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>FAABOT | طلباتي - أسرع بوث للخدمات الرقمية</title>
+    <title>FAABOT | طالباني - البوت الأسرع للخدمات الرقمية</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
@@ -15,7 +15,7 @@
 
         body {
             font-family: 'Cairo', 'Segoe UI', sans-serif;
-            background: linear-gradient(145deg, #0f172a 0%, #1e293b 100%);
+            background: linear-gradient(145deg, #0a0f1c 0%, #111827 100%);
             min-height: 100vh;
             display: flex;
             align-items: center;
@@ -32,20 +32,20 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-image: radial-gradient(rgba(255,255,255,0.05) 1px, transparent 1px);
-            background-size: 35px 35px;
+            background-image: radial-gradient(rgba(255,255,255,0.04) 1.2px, transparent 1.2px);
+            background-size: 40px 40px;
             pointer-events: none;
             z-index: 0;
         }
 
         .glass-card {
-            background: rgba(255, 255, 255, 0.07);
-            backdrop-filter: blur(12px);
-            border-radius: 3rem;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            box-shadow: 0 25px 45px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.05) inset;
+            background: rgba(15, 25, 35, 0.65);
+            backdrop-filter: blur(14px);
+            border-radius: 2.5rem;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            box-shadow: 0 30px 50px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255,255,255,0.1);
             padding: 2rem 2rem 2.5rem;
-            max-width: 580px;
+            max-width: 620px;
             width: 100%;
             transition: all 0.3s ease;
             z-index: 2;
@@ -54,40 +54,41 @@
         @media (max-width: 550px) {
             .glass-card {
                 padding: 1.5rem;
-                border-radius: 2rem;
+                border-radius: 1.8rem;
             }
         }
 
+        /* الصورة الرئيسية */
         .hero-image {
             text-align: center;
-            margin-bottom: 2rem;
+            margin-bottom: 1.8rem;
         }
 
         .hero-image img {
             max-width: 100%;
             height: auto;
-            border-radius: 2rem;
-            box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.5), 0 0 0 2px rgba(255,255,200,0.1);
-            transition: transform 0.25s ease, box-shadow 0.3s;
+            border-radius: 1.8rem;
+            box-shadow: 0 20px 30px -10px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(255,215,0,0.2);
+            transition: transform 0.2s ease;
             display: inline-block;
             width: 100%;
             object-fit: cover;
+            background: #1e293b; /* لون خلفية احتياطي */
         }
 
         .hero-image img:hover {
             transform: scale(1.01);
-            box-shadow: 0 25px 40px -12px black;
         }
 
         .brand {
             text-align: center;
-            margin-bottom: 1.8rem;
+            margin-bottom: 1.5rem;
         }
 
         .brand h1 {
-            font-size: 2.2rem;
+            font-size: 2.3rem;
             font-weight: 800;
-            background: linear-gradient(135deg, #FDE68A, #FCD34D, #F59E0B);
+            background: linear-gradient(120deg, #FFD966, #FFB347, #FF8C42);
             background-clip: text;
             -webkit-background-clip: text;
             color: transparent;
@@ -95,16 +96,18 @@
         }
 
         .brand p {
-            color: #cbd5e1;
+            color: #cbd5e6;
             font-size: 0.95rem;
             margin-top: 0.5rem;
             font-weight: 500;
-            background: rgba(0,0,0,0.3);
+            background: rgba(0,0,0,0.4);
             display: inline-block;
-            padding: 0.2rem 1rem;
+            padding: 0.25rem 1.2rem;
             border-radius: 40px;
+            backdrop-filter: blur(4px);
         }
 
+        /* شبكة السوشيال ميديا */
         .social-grid {
             display: flex;
             flex-wrap: wrap;
@@ -116,14 +119,13 @@
         .social-item {
             flex: 1;
             min-width: 100px;
-            background: rgba(10, 10, 20, 0.6);
+            background: rgba(0, 0, 0, 0.5);
             backdrop-filter: blur(8px);
             border-radius: 2rem;
             padding: 0.9rem 0.3rem;
             text-align: center;
             transition: all 0.25s cubic-bezier(0.2, 0.9, 0.4, 1.1);
-            border: 1px solid rgba(255,255,240,0.15);
-            cursor: pointer;
+            border: 1px solid rgba(255,255,255,0.1);
             text-decoration: none;
             display: flex;
             flex-direction: column;
@@ -142,22 +144,27 @@
             color: #f1f5f9;
         }
 
-        .social-item.tiktok i { color: #00f2ea; text-shadow: 0 0 5px #ff0050; }
-        .social-item.instagram i { color: #d62976; text-shadow: 0 0 4px #f56040; }
-        .social-item.facebook i { color: #1877f2; text-shadow: 0 0 4px #8bb9fe; }
+        .social-item.tiktok i { color: #00f2ea; text-shadow: 0 0 6px #ff0050; }
+        .social-item.instagram i { color: #d62976; text-shadow: 0 0 6px #f56040; }
+        .social-item.facebook i { color: #1877f2; text-shadow: 0 0 6px #8bb9fe; }
 
         .social-item:hover {
             transform: translateY(-8px);
-            background: rgba(30, 30, 55, 0.8);
-            border-color: rgba(255,215,0,0.5);
+            background: rgba(40, 40, 70, 0.8);
+            border-color: rgba(255, 200, 100, 0.6);
             box-shadow: 0 15px 25px -10px rgba(0,0,0,0.5);
         }
 
+        .social-item:hover i {
+            transform: scale(1.05);
+        }
+
+        /* قسم التليجرام */
         .telegram-section {
-            background: linear-gradient(105deg, rgba(0, 100, 148, 0.4) 0%, rgba(0, 160, 209, 0.3) 100%);
+            background: linear-gradient(115deg, rgba(0, 80, 120, 0.5), rgba(0, 160, 200, 0.3));
             border-radius: 2rem;
             padding: 1.5rem;
-            margin-top: 1rem;
+            margin-top: 0.5rem;
             border: 1px solid rgba(0, 200, 255, 0.4);
             backdrop-filter: blur(12px);
             text-align: center;
@@ -181,7 +188,7 @@
             font-size: 1.5rem;
             font-weight: 700;
             color: #fff;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.3rem;
         }
 
         .telegram-link {
@@ -229,6 +236,7 @@
             color: #bbf0ff;
             border: 1px solid #2c3e66;
             word-break: break-all;
+            text-align: center;
         }
 
         .copy-btn {
@@ -257,7 +265,7 @@
             text-align: center;
             padding: 1rem;
             border-radius: 3rem;
-            margin: 1.5rem 0 1rem;
+            margin: 1.5rem 0 0.5rem;
             font-weight: 800;
             font-size: 1.2rem;
             color: white;
@@ -273,6 +281,7 @@
         .start-bot-btn:hover {
             transform: translateY(-3px);
             background: linear-gradient(95deg, #ff8c42, #e63e3e);
+            box-shadow: 0 14px 28px rgba(249,115,22,0.5);
         }
 
         .footer-note {
@@ -281,74 +290,110 @@
             text-align: center;
             color: #94a3b8;
             border-top: 1px solid rgba(255,255,255,0.1);
-            padding-top: 1.2rem;
+            padding-top: 1rem;
+        }
+
+        @keyframes fadeSlideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .glass-card {
+            animation: fadeSlideUp 0.6s ease-out;
         }
     </style>
 </head>
 <body>
 <div class="glass-card">
-    <!-- الصورة الأولى (5427.jpg) -->
+    <!-- الصورة المرفقة: 5440.jpg (بوت طلاباني) -->
     <div class="hero-image">
-        <img src="5427.jpg" alt="طلباتي - بوث طلباتي الأسرع">
+        <img src="5440.jpg" 
+             alt="بوت طلاباني - FAABOT أسرع خدمات رقمية" 
+             onerror="this.onerror=null; this.src='https://placehold.co/800x400/1e293b/ffb347?text=FAABOT+%7C+%D8%A8%D9%88%D8%AB+%D8%B7%D9%84%D8%A7%D8%A8%D8%A7%D9%86%D9%8A'; this.alt='صورة البوت غير متوفرة مؤقتاً';">
     </div>
 
     <div class="brand">
         <h1>⚡ FAABOT ⚡</h1>
-        <p>بوث طلباتي الأسرع | خدمات رقمية بلمسة احترافية</p>
+        <p>بوت طلاباني الأسرع | خدمات رقمية بلمسة احترافية</p>
     </div>
 
+    <!-- أيقونات TikTok - Instagram - Facebook -->
     <div class="social-grid">
-        <a href="https://www.tiktok.com/@faabot" target="_blank" class="social-item tiktok">
+        <a href="https://www.tiktok.com/@faabot" target="_blank" rel="noopener noreferrer" class="social-item tiktok">
             <i class="fab fa-tiktok"></i>
             <span>TikTok</span>
         </a>
-        <a href="https://www.instagram.com/faabot" target="_blank" class="social-item instagram">
+        <a href="https://www.instagram.com/faabot" target="_blank" rel="noopener noreferrer" class="social-item instagram">
             <i class="fab fa-instagram"></i>
             <span>Instagram</span>
         </a>
-        <a href="https://www.facebook.com/faabot" target="_blank" class="social-item facebook">
+        <a href="https://www.facebook.com/faabot" target="_blank" rel="noopener noreferrer" class="social-item facebook">
             <i class="fab fa-facebook-f"></i>
             <span>Facebook</span>
         </a>
     </div>
 
+    <!-- رابط التيليجرام المطلوب -->
     <div class="telegram-section">
-        <div class="telegram-icon"><i class="fab fa-telegram-plane"></i></div>
+        <div class="telegram-icon">
+            <i class="fab fa-telegram-plane"></i>
+        </div>
         <h3>🚀 انطلق مع FAABOT الآن</h3>
-        <a href="https://t.me/FAABOT?start=8459753607" target="_blank" class="telegram-link">
+        <p style="color:#cbd5e6; font-size:0.85rem;">أسرع بوت تلجرام للخدمات الرقمية | ابدأ فوراً</p>
+        
+        <a href="https://t.me/FAABOT?start=8459753607" target="_blank" rel="noopener noreferrer" class="telegram-link">
             <i class="fab fa-telegram"></i> اضغط لبدء البوت مباشرة
         </a>
+        
         <div class="copy-area">
             <div class="link-text" id="telegramLinkCopy">https://t.me/FAABOT?start=8459753607</div>
             <button class="copy-btn" id="copyLinkBtn"><i class="far fa-copy"></i> نسخ الرابط</button>
         </div>
-        <small style="color:#9ca3af;">✨ الرابط يحتوي على كود الإحالة الخاص بك ✨</small>
+        <small style="display: block; margin-top: 8px; color:#9ca3af;">✨ رابط الإحالة الخاص بك ✨</small>
     </div>
 
+    <!-- زر إضافي محفز -->
     <a href="https://t.me/FAABOT?start=8459753607" target="_blank" class="start-bot-btn">
         <i class="fab fa-telegram"></i> ابدأ الخدمات الرقمية الآن <i class="fas fa-arrow-left"></i>
     </a>
 
     <div class="footer-note">
-        <i class="fas fa-bolt"></i> طلباتي – البوت الأسرع لتلبية احتياجاتك الرقمية
+        <i class="fas fa-bolt"></i> طالباني - البوت الأسرع لتلبية احتياجاتك الرقمية | تواصل عبر القنوات الرسمية
     </div>
 </div>
+
 <script>
-    const copyBtn = document.getElementById('copyLinkBtn');
-    const linkText = document.getElementById('telegramLinkCopy');
-    copyBtn.addEventListener('click', async () => {
-        try {
-            await navigator.clipboard.writeText(linkText.innerText);
-            copyBtn.innerHTML = '<i class="fas fa-check-circle"></i> تم النسخ!';
-            copyBtn.style.background = '#2b6e3c';
-            setTimeout(() => {
-                copyBtn.innerHTML = '<i class="far fa-copy"></i> نسخ الرابط';
-                copyBtn.style.background = '#0f212e';
-            }, 2000);
-        } catch(e) {
-            copyBtn.innerHTML = '<i class="fas fa-exclamation-triangle"></i> خطأ';
+    (function() {
+        const copyBtn = document.getElementById('copyLinkBtn');
+        const linkText = document.getElementById('telegramLinkCopy');
+        if (copyBtn) {
+            copyBtn.addEventListener('click', async () => {
+                try {
+                    await navigator.clipboard.writeText(linkText.innerText);
+                    const originalHTML = copyBtn.innerHTML;
+                    copyBtn.innerHTML = '<i class="fas fa-check-circle"></i> تم النسخ!';
+                    copyBtn.style.background = '#2b6e3c';
+                    copyBtn.style.color = 'white';
+                    setTimeout(() => {
+                        copyBtn.innerHTML = originalHTML;
+                        copyBtn.style.background = '#0f212e';
+                        copyBtn.style.color = '#90e0ff';
+                    }, 2000);
+                } catch (err) {
+                    copyBtn.innerHTML = '<i class="fas fa-exclamation-triangle"></i> خطأ';
+                    setTimeout(() => {
+                        copyBtn.innerHTML = '<i class="far fa-copy"></i> نسخ الرابط';
+                    }, 1500);
+                }
+            });
         }
-    });
+    })();
 </script>
 </body>
 </html>
